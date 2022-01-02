@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Archivo Black';
+  src: url(/fonts/ArchivoBlack.ttf) format(truetype);
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(/fonts/HelveticaNeue.ttf) format(truetype);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 14px;
+
+  --white: #FFFFFF;
+  --black: #2A2E38;
+  --blue: #1551d8;
+  --light-blue: #d3e4fe;
+  --trans-bg: #ffffffd9;
+  --heading-family: 'Archivo Black', sans-serif;
+  --heading-weight: 900;
+  --copy-family: 'Helvetica Neue', sans-serif;
+  --copy-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-family);
+  font-weight: var(--heading-weight);
+  color: var(--blue);
+}
+
+h1 { font-size: clamp(50px, calc(5vw + 1rem), 70px); text-align: right;}
+h2 { font-size: clamp(30px, calc(4vw + 1rem), 50px); }
+
+p, a, span, blockquote, figcaption {
+  font-family: var(--copy-family);
+  font-weight: var(--copy-weight);
+  color: var(--black);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover { border-bottom: 2px solid var(--blue); }
