@@ -8,8 +8,7 @@
     "web:dev": "pnpm recursive run dev --filter \"@stordahl/web\"",
     "studio:dev": "pnpm recursive run dev --filter \"@stordahl/studio\"",
     "build": "pnpm recursive run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "[[ $CI = true ]] && npx pnpm@3 install -r --store=node_modules/.pnpm-store || echo skiping pnpm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
 
   },
   "repository": {

@@ -55,6 +55,7 @@ importers:
       '@sanity/client': ^2.23.0
       '@sanity/image-url': ^1.0.1
       '@sveltejs/adapter-netlify': ^1.0.0-next.36
+      '@sveltejs/adapter-static': ^1.0.0-next.24
       '@sveltejs/kit': 1.0.0-next.202
       eslint: ^8.4.1
       eslint-config-prettier: ^8.3.0
@@ -72,6 +73,7 @@ importers:
     devDependencies:
       '@portabletext/svelte': 0.2.0_svelte@3.44.3
       '@sveltejs/adapter-netlify': 1.0.0-next.37
+      '@sveltejs/adapter-static': 1.0.0-next.24
       '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.3
       eslint: 8.6.0
       eslint-config-prettier: 8.3.0_eslint@8.6.0
@@ -3614,6 +3616,12 @@ packages:
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.13.15
+      tiny-glob: 0.2.9
+    dev: true
+
+  /@sveltejs/adapter-static/1.0.0-next.24:
+    resolution: {integrity: sha512-lMiwZrZumWRrTQxaj9pFs5oW0h/97spyDl1QjmnkNaA006WeqornoETt31WpU0Lz2/2uYNXvUBBcL1LGc9Vylg==}
+    dependencies:
       tiny-glob: 0.2.9
     dev: true
 
