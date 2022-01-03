@@ -1,62 +1,29 @@
-<script context="module">
-  export async function load({fetch}) {
-    try {
-      const res = await fetch('/writing/all.json')
-      const data = await res.json()
-      return {
-        props: data
-      }
-    } catch (err) {
-      console.log('500:', err)
-    }
-  }
-</script>
-
 <script>
-  import ListItem from '$lib/ListItem.svelte'
-
-  export let posts
-  $:(console.log(posts));
+  export let title
+  export let num
+  export let path = undefined
+  export let style = '';
 </script>
 
-<svelte:head>
-  <title>Blog</title>
-</svelte:head>
-
-<section>
-  <div id="page-header">
-    <h1>WRITING</h1>
-    <img src="/images/dots.svg" alt="a decorative dot grid">
+{#if path}
+  <a class="list-item" href={path} style={style}>
+    <span>{num}</span>
+    <h2>{title}</h2>
+    <slot />
+  </a>
+{:else}
+  <div class="list-item" style={style}>
+    <span>{num}</span>
+    <h2>{title}</h2>
+    <slot />
   </div>
-  {#each posts as post, index}
-    <a class="list-item" href="/writing/{post.slug.current}">
-      <span>{index + 1}</span>
-      <h2>{post.title}</h2>
-    </a>
-  {/each}
-</section>
-
-
-<!-- <PostsGrid {posts} /> -->
-
+{/if}
 
 <style>
-  #page-header {
-    background-color: var(--trans-bg);
-    position: relative;
-    padding-bottom: 20px;
-  }
-  #page-header > img {
-    position: absolute;
-    top: 0;
-    right: -3rem;
-    max-width: 300px;
-    z-index: -1;
-  }
   a:hover {
     text-decoration: unset;
   }
-   .list-item {
+  .list-item {
     /* display: flex; */
     display: grid;
     grid-template-columns: 1fr;
@@ -93,4 +60,11 @@
     font-weight: 400;
     margin: 0;
   }
+
+  @media screen and (min-width: 900px) {
+    .list-item {
+      grid-template-columns: max-content minmax(200px, 400px);
+    }
+  }
+  
 </style>

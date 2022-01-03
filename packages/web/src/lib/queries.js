@@ -29,7 +29,16 @@ image,
 export const getProjectsQuery = `
   *[_type == 'caseStudy']{
     name,
+    slug,
     type,
     year
   }
 `
+export const getSingleProjectQuery = (slug) => {
+  return `
+    *[_type == 'caseStudy' && slug.current == '${slug}'][0]{
+      "slug": slug.current,
+      ...
+    }
+  `
+}

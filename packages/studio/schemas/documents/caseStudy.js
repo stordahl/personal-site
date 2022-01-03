@@ -25,6 +25,19 @@ export default {
       fieldset: 'metadata'
     },
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      fieldset: 'metadata',
+      options: {
+        source: 'name',
+        slugify: input => input
+                            .toLowerCase()
+                            .replace(/\s+/g, '-')
+                            .slice(0, 200)
+      }
+    },
+    {
       name: 'url',
       title: 'Site Url',
       type: 'url',

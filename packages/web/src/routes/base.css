@@ -6,6 +6,11 @@
   font-family: 'Helvetica Neue';
   src: url(/fonts/HelveticaNeue.ttf) format(truetype);
 }
+@font-face {
+  font-family: 'Ayuthaya';
+  src: url(/fonts/Ayuthaya.ttf) format(truetype);
+}
+
 
 * {
   margin: 0;
@@ -33,10 +38,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-family);
   font-weight: var(--heading-weight);
   color: var(--blue);
+  margin-bottom: 20px;
+
 }
 
-h1 { font-size: clamp(50px, calc(5vw + 1rem), 70px); text-align: right;}
+h1 { font-size: clamp(50px, calc(5vw + 1rem), 70px); text-align: right; }
 h2 { font-size: clamp(30px, calc(4vw + 1rem), 50px); }
+h3 { font-size: clamp(20px, calc(3.5vw + 1rem), 45px); }
 
 p, a, span, blockquote, figcaption {
   font-family: var(--copy-family);
@@ -44,9 +52,34 @@ p, a, span, blockquote, figcaption {
   color: var(--black);
 }
 
+p {
+  margin-bottom: 20px;
+  font-size: clamp(1rem, calc(1vw + 1rem), 1.2rem);
+}
+
 a {
   color: var(--blue);
   text-decoration: none;
 }
 
-a:hover { border-bottom: 2px solid var(--blue); }
+a:hover { text-decoration: underline;}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.2rem;
+  font-family: var(--copy-family);
+  font-weight: var(--copy-weight);
+}
+
+img {
+  max-width: 100%;
+}
+
+code[class*='language-'],
+pre[class*='language-'],
+code > * {
+  font-family: 'Ayuthaya', monospace !important;
+}

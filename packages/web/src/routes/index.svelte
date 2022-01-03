@@ -1,10 +1,3 @@
-<script context=module>
-   
-</script>
-<script>
-
-</script>
-
 <section>
   <div id="content">
     <h1>JACOB<br/>STORDAHL</h1>
@@ -35,8 +28,10 @@
   #content {
     grid-area: content;
     justify-items: right;
-    justify-self: right;
+    justify-self: left;
     align-self: end;
+    margin-left: auto;
+    background-color: var(--trans-bg);
   }
 
   h1 {
@@ -58,7 +53,6 @@
   }
   #dots > img {
     max-width: 100%;
-/* width: 100%; */
   }
 
   nav {
@@ -68,11 +62,13 @@
   }
   nav > ul {
     list-style: none;
-    font-size: clamp(1.2rem, calc(1vw + 1rem), 2rem);
+    /* font-size: clamp(1.2rem, calc(1vw + 1rem), 2rem); */
+    
     
   }
   nav li a {
     font-family: var(--heading-family);
     font-weight: 900;
+    font-size: clamp(1.2rem, calc(3vw + 1.5rem), 2rem);
   }
 </style>

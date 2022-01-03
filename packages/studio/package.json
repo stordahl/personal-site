@@ -5,6 +5,7 @@
   "main": "package.json",
   "author": "Jacob Stordahl",
   "scripts": {
+    "install": "sanity install",
     "dev": "sanity start",
     "build": "sanity build && npm run copy-redirects",
     "copy-redirects": "cpy _redirects dist",

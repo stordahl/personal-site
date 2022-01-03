@@ -1,7 +1,7 @@
 <script context="module">
   export async function load({page, fetch}) {
     try {
-      const url = `/blog/${page.params.slug}.json`
+      const url = `/writing/${page.params.slug}.json`
       const res = await fetch(url)
       const data = await res.json()
 
@@ -44,19 +44,30 @@
 
 <hr />
 
-{#if post.image}
-  <SanityImage image={post.image} />
-{/if}
+<article>
+  <PortableText
+    blocks={post.body}
+    serializers={{
+      types: {
+        code: Code,
+        image: ImageBlock
+      },
+      marks: {
+        link: Link
+      }
+    }}
+  />
 
-<PortableText
-  blocks={post.body}
-  serializers={{
-    types: {
-      code: Code,
-      image: ImageBlock
-    },
-    marks: {
-      link: Link
-    }
-  }}
-/>
+</article>
+<hr/>
+
+<style>
+  p {
+    text-align: right;
+    margin: 1rem 0;
+  }
+  article {
+    width: clamp(200px, calc(700px + 5vw), 1000px);
+    margin: 2rem auto;
+  }
+</style>
