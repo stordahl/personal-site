@@ -10,7 +10,6 @@
     "build": "pnpm recursive run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "[[ $CI = true ]] && npx pnpm@3 install -r --store=node_modules/.pnpm-store || echo skiping pnpm install"
-
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,6 @@
   },
   "homepage": "https://github.com/stordahl/personal-site#readme",
   "devDependencies": {
-    "pnpm": "3"
+    "pnpm": "^3.8.1"
   }
 }
