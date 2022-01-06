@@ -1,12 +1,12 @@
 <script>
-  import Prism from 'prismjs'
+  // import Prism from 'prismjs'
   import { page } from '$app/stores'
   import './base.css'
   import Header from '$lib/Header.svelte'
   import Footer from '$lib/Footer.svelte'
   import { onMount } from 'svelte'
 
-  onMount(() => Prism.highlightAll())
+  // onMount(() => Prism.highlightAll())
 </script>
 
 {#if $page.url.pathname !== '/'}
