@@ -14,7 +14,7 @@
   }
 </script>
 <script>
-  import SvelteSeo from 'svelte-seo'
+  // import SvelteSeo from 'svelte-seo'
   import ListItem from '$lib/ListItem.svelte'
   import Code from '$lib/Code.svelte'
   import Link from '$lib/Link.svelte'
@@ -26,7 +26,7 @@
   let num = 1;
 </script>
 
-<SvelteSeo 
+<!-- <SvelteSeo 
   title='Jacob Stordahl'
   description='designer & developer'
   openGraph={{
@@ -43,7 +43,7 @@
       }
     ]
   }}
-/>
+/> -->
 
 <section>
   <div id="page-header">

@@ -35,7 +35,7 @@
   })
 </script>
 
-<SvelteSeo 
+<!-- <SvelteSeo 
   title={post.title}
   description={post.body[0].children[0].text.slice(0,100)}
   openGraph={{
@@ -58,7 +58,7 @@
       }
     ]
   }}
-/>
+/> -->
 
 <h1>{post.title}</h1>
 <p>
