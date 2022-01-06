@@ -4,7 +4,7 @@
   "author": "Jacob Stordahl",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "npx svelte-kit build",
     "preview": "svelte-kit preview",
     "build:sanity": "cd studio && npm run build",
     "start:sanity": "cd studio && npm run start",
