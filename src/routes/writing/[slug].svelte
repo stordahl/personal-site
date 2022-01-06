@@ -24,7 +24,7 @@
   import Code from '$lib/Code.svelte'
   import Link from '$lib/Link.svelte'
   import ImageBlock from '$lib/ImageBlock.svelte'
-  import SvelteSeo from 'svelte-seo'
+  // import SvelteSeo from 'svelte-seo'
 
   export let post
 
