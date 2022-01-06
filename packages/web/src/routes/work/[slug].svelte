@@ -1,7 +1,7 @@
 <script context=module>
-   export async function load({fetch, page}) {
+   export async function load({fetch, params}) {
     try {
-      const res = await fetch(`/work/${page.params.slug}.json`)
+      const res = await fetch(`/work/${params.slug}.json`)
       const data = await res.json()
       return {
         props: {
@@ -14,6 +14,7 @@
   }
 </script>
 <script>
+  import SvelteSeo from 'svelte-seo'
   import ListItem from '$lib/ListItem.svelte'
   import Code from '$lib/Code.svelte'
   import Link from '$lib/Link.svelte'
@@ -21,7 +22,28 @@
   import PortableText from '@portabletext/svelte'
   
   export let data
+
+  let num = 1;
 </script>
+
+<SvelteSeo 
+  title='Jacob Stordahl'
+  description='designer & developer'
+  openGraph={{
+    title: 'Jacob Stordahl',
+    description: 'designer & developer',
+    url: 'https://stordahl.dev',
+    type: 'website',
+    images: [
+      {
+        url: 'https://stordahl.dev/images/og.png',
+        width: 850,
+        height: 650,
+        alt: 'Jacob Stordahl - designer & developer'
+      }
+    ]
+  }}
+/>
 
 <section>
   <div id="page-header">
@@ -33,28 +55,58 @@
     <img src="/images/dots.svg" alt="a decorative dot grid">
   </div>
   {#if data.background}
-    <ListItem title={'Background'} num={1} style={'align-items: flex-start; flex-wrap: wrap;'}>
+    <ListItem title={'Background'} num={num++} style={'align-items: flex-start; flex-wrap: wrap;'}>
       <div class="pt-inner">
-      <PortableText blocks={data.background}/>
+      <PortableText 
+        blocks={data.background}
+        serializers={{
+            types: {
+              code: Code,
+              image: ImageBlock
+            },
+            marks: {
+              link: Link
+            }
+          }}/>
       </div>
     </ListItem>
   {/if}
   {#if data.design}
-    <ListItem title={'Design'} num={2} style={'align-items: flex-start; flex-wrap: wrap;'}>
+    <ListItem title={'Design'} num={num++} style={'align-items: flex-start; flex-wrap: wrap;'}>
       <div class="pt-inner">
-        <PortableText blocks={data.design}/>
+        <PortableText 
+          blocks={data.design}
+          serializers={{
+            types: {
+              code: Code,
+              image: ImageBlock
+            },
+            marks: {
+              link: Link
+            }
+          }}/>
       </div>
     </ListItem>
   {/if}
   {#if data.tech}
-    <ListItem title={'Tech'} num={3} style={'align-items: flex-start; flex-wrap: wrap;'}>
+    <ListItem title={'Tech'} num={num++} style={'align-items: flex-start; flex-wrap: wrap;'}>
       <div class="pt-inner">
-        <PortableText blocks={data.tech}/>
+        <PortableText 
+          blocks={data.tech}
+          serializers={{
+            types: {
+              code: Code,
+              image: ImageBlock
+            },
+            marks: {
+              link: Link
+            }
+          }}/>
       </div>
     </ListItem>
   {/if}
   {#if data.postmortem}
-    <ListItem title={'Postmortem'} num={4} style={'align-items: flex-start; flex-wrap: wrap;'}>
+    <ListItem title={'Postmortem'} {num} style={'align-items: flex-start; flex-wrap: wrap;'}>
       <div class="pt-inner">
         <PortableText 
           blocks={data.postmortem}
@@ -71,7 +123,7 @@
       </div>
     </ListItem>
   {/if}
-  <ListItem title="Metadata" num="">
+  <ListItem title="Metadata" num="*">
     <ul>
       <li>live url: <a href={data.url} target="_blank">{data.url}</a></li>
       <li>provided: {data.type}</li>

@@ -6,12 +6,10 @@
   import Footer from '$lib/Footer.svelte'
   import { onMount } from 'svelte'
 
-  $:($page)
-
   onMount(() => Prism.highlightAll())
 </script>
 
-{#if $page.path !== '/'}
+{#if $page.url.pathname !== '/'}
   <div id="dots">
     <img src="/images/dots.svg" alt="A decorative dot grid">
   </div>

@@ -13,15 +13,29 @@
 </script>
 
 <script>
-  import ListItem from '$lib/ListItem.svelte'
+  import SvelteSeo from 'svelte-seo'
 
   export let posts
-  $:(console.log(posts));
 </script>
 
-<svelte:head>
-  <title>Blog</title>
-</svelte:head>
+<SvelteSeo 
+  title='Jacob Stordahl'
+  description='designer & developer'
+  openGraph={{
+    title: 'Jacob Stordahl',
+    description: 'designer & developer',
+    url: 'https://stordahl.dev',
+    type: 'website',
+    images: [
+      {
+        url: 'https://stordahl.dev/images/og.png',
+        width: 850,
+        height: 650,
+        alt: 'Jacob Stordahl - designer & developer'
+      }
+    ]
+  }}
+/>
 
 <section>
   <div id="page-header">
@@ -35,10 +49,6 @@
     </a>
   {/each}
 </section>
-
-
-<!-- <PostsGrid {posts} /> -->
-
 
 <style>
   #page-header {
@@ -92,5 +102,6 @@
     color: var(--black);
     font-weight: 400;
     margin: 0;
+    font-size: clamp(20px, calc(3vw + 1rem), 40px);
   }
 </style>

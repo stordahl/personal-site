@@ -14,9 +14,31 @@
   }
 </script>
 <script>
+  import SvelteSeo from 'svelte-seo'
   import ListItem from '$lib/ListItem.svelte'
   export let data
+
+  $:({ projects, oss } = data);
 </script>
+
+<SvelteSeo 
+  title='Jacob Stordahl'
+  description='designer & developer'
+  openGraph={{
+    title: 'Jacob Stordahl',
+    description: 'designer & developer',
+    url: 'https://stordahl.dev',
+    type: 'website',
+    images: [
+      {
+        url: 'https://stordahl.dev/images/og.png',
+        width: 850,
+        height: 650,
+        alt: 'Jacob Stordahl - designer & developer'
+      }
+    ]
+  }}
+/>
 
 <section>
   <div id="page-header">
@@ -27,7 +49,7 @@
     <img src="/images/dots.svg" alt="a decorative dot grid">
   </div>
   <div>
-    {#each data as {name, slug, type, year}, index}
+    {#each projects as {name, slug, type, year}, index}
         <ListItem 
           title={name} 
           num={index + 1} 
@@ -38,6 +60,20 @@
             <span>{year}</span>
           </div>
         </ListItem>
+    {/each}
+  </div>
+  <div id="section-header">
+    <div class="faded faded-all">
+      <p>These projects have been chosen to showcase some of the work I've contributed to the open source community.</p>
+    </div>
+  </div>
+  <div>
+    {#each oss as {title, year, url}, index}
+      <ListItem 
+          {title} 
+          num={index + 1} 
+          path={url}
+        />
     {/each}
   </div>
 </section>
@@ -74,4 +110,7 @@
     z-index: -1;
   }
 
+  #section-header {
+    margin: 3rem auto;
+  }
 </style>

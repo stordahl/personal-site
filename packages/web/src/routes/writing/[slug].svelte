@@ -1,7 +1,7 @@
 <script context="module">
-  export async function load({page, fetch}) {
+  export async function load({params, fetch}) {
     try {
-      const url = `/writing/${page.params.slug}.json`
+      const url = `/writing/${params.slug}.json`
       const res = await fetch(url)
       const data = await res.json()
 
@@ -24,22 +24,45 @@
   import Code from '$lib/Code.svelte'
   import Link from '$lib/Link.svelte'
   import ImageBlock from '$lib/ImageBlock.svelte'
-  import SanityImage from '$lib/SanityImage.svelte'
+  import SvelteSeo from 'svelte-seo'
 
   export let post
-</script>
 
-<svelte:head>
-  <title>{post.title}</title>
-</svelte:head>
-
-<h1>{post.title}</h1>
-<p>
-  Published {new Date(post.publishedAt).toLocaleDateString('en', {
+  $: published = new Date(post.publishedAt).toLocaleDateString('en', {
     month: 'long',
     day: '2-digit',
     year: 'numeric'
-  })}
+  })
+</script>
+
+<SvelteSeo 
+  title={post.title}
+  description={post.body[0].children[0].text.slice(0,100)}
+  openGraph={{
+    title: post.title,
+    description: post.body[0].children[0].text.slice(0,100),
+    url: `https://stordahl.dev/writing/${post.slug.current}`,
+    type: 'article',
+    article: {
+      publishedTime: published,
+      authors: [
+        "https://twitter.com/stordahl_"
+      ]
+    },
+    images: [
+      {
+        url: 'https://stordahl.dev/images/og.png',
+        width: 850,
+        height: 650,
+        alt: 'Jacob Stordahl - designer & developer'
+      }
+    ]
+  }}
+/>
+
+<h1>{post.title}</h1>
+<p>
+  Published {published}
 </p>
 
 <hr />

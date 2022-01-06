@@ -35,7 +35,7 @@
     </a>
   </div>
   <div id="copyright">
-    <span>© {new Date().getFullYear()} Jacob Stordahl</span>
+    <span>© {new Date().getFullYear()} Jacob Stordahl | <a href="https://github.com/stordahl">github</a></span>
   </div>
 </footer>
 

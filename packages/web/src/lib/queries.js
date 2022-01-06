@@ -27,7 +27,7 @@ image,
 `
 
 export const getProjectsQuery = `
-  *[_type == 'caseStudy']{
+  *[_type == 'caseStudy'] | order(year desc) {
     name,
     slug,
     type,
@@ -42,3 +42,11 @@ export const getSingleProjectQuery = (slug) => {
     }
   `
 }
+
+export const openSourceQuery = `
+  *[_type == 'openSource'] | order(year desc) {
+    title,
+    url,
+    year  
+  }
+`

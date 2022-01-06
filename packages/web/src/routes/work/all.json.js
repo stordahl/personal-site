@@ -1,12 +1,18 @@
 import { client } from '$lib/sanityClient'
-import { getProjectsQuery } from '$lib/queries';
+import { getProjectsQuery, openSourceQuery } from '$lib/queries';
 
 /**
 * @type {import('@sveltejs/kit').RequestHandler}
 */
 export const get = async () => {
 
-  const res = await client.fetch(getProjectsQuery);
+  const projects = await client.fetch(getProjectsQuery);
+  const oss = await client.fetch(openSourceQuery);
+
+  const res = {
+    projects,
+    oss
+  }
 
   if (res) {
     return {

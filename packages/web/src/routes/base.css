@@ -72,6 +72,7 @@ li {
   font-size: 1.2rem;
   font-family: var(--copy-family);
   font-weight: var(--copy-weight);
+  margin-bottom: 1rem;
 }
 
 img {

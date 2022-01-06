@@ -1,3 +1,26 @@
+<script>
+  import SvelteSeo from 'svelte-seo'
+</script>
+
+<SvelteSeo 
+  title='Jacob Stordahl'
+  description='designer & developer'
+  openGraph={{
+    title: 'Jacob Stordahl',
+    description: 'designer & developer',
+    url: 'https://stordahl.dev',
+    type: 'website',
+    images: [
+      {
+        url: 'https://stordahl.dev/images/og.png',
+        width: 850,
+        height: 650,
+        alt: 'Jacob Stordahl - designer & developer'
+      }
+    ]
+  }}
+/>
+
 <section>
   <div id="content">
     <h1>JACOB<br/>STORDAHL</h1>

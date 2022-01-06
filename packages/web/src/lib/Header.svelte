@@ -1,12 +1,5 @@
-<script context="module">
-  import {page} from '$app/stores'
-</script>
-
 <script>
-  export let title = 'My Blog'
-
-  let path
-  $: ({path} = $page);
+  export let title = 'My Blog';
 </script>
 
 <header>

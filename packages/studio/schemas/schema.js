@@ -8,7 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import caseStudy from './documents/caseStudy'
 import category from './documents/category'
 import post from './documents/post'
-
+import openSource from './documents/openSource'
 // Object types
 import portableText from './objects/portableText'
 
@@ -20,5 +20,6 @@ export default createSchema({
     category,
     portableText,
     caseStudy,
+    openSource,
   ])
 })
