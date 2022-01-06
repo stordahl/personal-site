@@ -5,13 +5,16 @@ const config = {
   kit: {
     target: '#svelte',
     adapter: adapter(),
-    vite: {
-      server: {
-        fs: {
-          allow: ['studio']
+    vite: () => ({
+      
+      build: {
+        rollupOptions: {
+          external: [
+            'svelte-seo'
+          ]
         }
       }
-    }
+    })
   }
 }
 

@@ -4,7 +4,7 @@
   import './base.css'
   import Header from '$lib/Header.svelte'
   import Footer from '$lib/Footer.svelte'
-  import { onMount } from 'svelte'
+  // import { onMount } from 'svelte'
 
   // onMount(() => Prism.highlightAll())
 </script>
