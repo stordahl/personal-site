@@ -5,16 +5,16 @@ const config = {
   kit: {
     target: '#svelte',
     adapter: adapter(),
-    vite: () => ({
+    // vite: () => ({
       
-      build: {
-        rollupOptions: {
-          external: [
-            'svelte-seo'
-          ]
-        }
-      }
-    })
+    //   build: {
+    //     rollupOptions: {
+    //       external: [
+    //         'svelte-seo'
+    //       ]
+    //     }
+    //   }
+    // })
   }
 }
 
