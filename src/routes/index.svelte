@@ -1,8 +1,8 @@
 <script>
-  // import SvelteSeo from 'svelte-seo'
+  import SvelteSeo from 'svelte-seo'
 </script>
 
-<!-- <SvelteSeo 
+<SvelteSeo 
   title='Jacob Stordahl'
   description='designer & developer'
   openGraph={{
@@ -19,7 +19,7 @@
       }
     ]
   }}
-/> -->
+/>
 
 <section>
   <div id="content">

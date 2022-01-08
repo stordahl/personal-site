@@ -24,7 +24,7 @@
   import Code from '$lib/Code.svelte'
   import Link from '$lib/Link.svelte'
   import ImageBlock from '$lib/ImageBlock.svelte'
-  // import SvelteSeo from 'svelte-seo'
+  import SvelteSeo from 'svelte-seo'
 
   export let post
 
@@ -35,7 +35,7 @@
   })
 </script>
 
-<!-- <SvelteSeo 
+<SvelteSeo 
   title={post.title}
   description={post.body[0].children[0].text.slice(0,100)}
   openGraph={{
@@ -58,7 +58,7 @@
       }
     ]
   }}
-/> -->
+/>
 
 <h1>{post.title}</h1>
 <p>

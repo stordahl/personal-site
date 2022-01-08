@@ -14,14 +14,14 @@
   }
 </script>
 <script>
-  // import SvelteSeo from 'svelte-seo'
+  import SvelteSeo from 'svelte-seo'
   import ListItem from '$lib/ListItem.svelte'
   export let data
 
   $:({ projects, oss } = data);
 </script>
 
-<!-- <SvelteSeo 
+<SvelteSeo 
   title='Jacob Stordahl'
   description='designer & developer'
   openGraph={{
@@ -38,7 +38,7 @@
       }
     ]
   }}
-/> -->
+/>
 
 <section>
   <div id="page-header">

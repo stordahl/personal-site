@@ -13,12 +13,12 @@
 </script>
 
 <script>
-  // import SvelteSeo from 'svelte-seo'
+  import SvelteSeo from 'svelte-seo'
 
   export let posts
 </script>
 
-<!-- <SvelteSeo 
+<SvelteSeo 
   title='Jacob Stordahl'
   description='designer & developer'
   openGraph={{
@@ -35,7 +35,7 @@
       }
     ]
   }}
-/> -->
+/>
 
 <section>
   <div id="page-header">
