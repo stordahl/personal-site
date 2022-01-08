@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-netlify'
+// import adapter from '@sveltejs/adapter-static'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,7 +11,8 @@ const config = {
     //   build: {
     //     rollupOptions: {
     //       external: [
-    //         'svelte-seo'
+    //         'svelte-seo',
+    //         'prismjs'
     //       ]
     //     }
     //   }
