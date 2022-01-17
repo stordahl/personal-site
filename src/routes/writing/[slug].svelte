@@ -90,7 +90,7 @@
     margin: 1rem 0;
   }
   article {
-    width: clamp(200px, calc(700px + 5vw), 1000px);
+    max-width: 900px;
     margin: 2rem auto;
   }
 </style>

@@ -143,7 +143,7 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding-bottom: clamp(0px, 1vw, 20px);
     position: relative;
     background-color: var(--trans-bg);
   }
@@ -171,6 +171,6 @@
 
   h1 {
     max-width: max-content;
+    margin-bottom: clamp(5px, calc(5px + 1vw), 20px);
   }
-
 </style>

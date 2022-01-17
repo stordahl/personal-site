@@ -42,8 +42,8 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-h1 { font-size: clamp(50px, calc(5vw + 1rem), 70px); text-align: right; }
-h2 { font-size: clamp(30px, calc(4vw + 1rem), 50px); }
+h1 { font-size: clamp(30px, calc(5vw + 1rem), 70px); text-align: right; }
+h2 { font-size: clamp(25px, calc(4vw + 1rem), 50px); }
 h3 { font-size: clamp(20px, calc(3.5vw + 1rem), 45px); }
 
 p, a, span, blockquote, figcaption {
@@ -54,7 +54,7 @@ p, a, span, blockquote, figcaption {
 
 p {
   margin-bottom: 20px;
-  font-size: clamp(1rem, calc(1vw + 1rem), 1.2rem);
+  font-size: clamp(1rem, calc(.5vw + 1rem), 1.2rem);
 }
 
 a {

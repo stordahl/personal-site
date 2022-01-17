@@ -27,6 +27,6 @@
   main {
     padding: 1rem;
     margin: auto;
-    width: clamp(100px, calc(80vw + 5px), 1220px);
+    width: clamp(300px, calc(80vw + 5px), 1220px);
   }
 </style>
