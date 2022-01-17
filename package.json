@@ -16,7 +16,7 @@
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^1.0.1",
     "@sveltejs/adapter-netlify": "^1.0.0-next.37",
-    "@sveltejs/kit": "1.0.0-next.208",
+    "@sveltejs/kit": "1.0.0-next.232",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
