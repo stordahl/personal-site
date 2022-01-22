@@ -11,16 +11,11 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '',
-                  title: 'Sanity Studio',
-                  name: 'personal-site-studio-3h19xtji',
-                  apiId: 'de579965-10ef-4213-be21-f6a34c0123a8'
-                },
-                {
-                  buildHookId: '',
-                  title: 'Blog Website',
-                  name: '',
-                  apiId: ''
+                  buildHookId: '61ec50f80c553c742b814244',
+                  title: 'Personal Site',
+                  name: 'stordahl-web',
+                  apiId: '9defc648-31a6-4d88-b797-9032ca0d6d35',
+                  url: 'https://stordahl.dev'
                 }
               ]
             }
