@@ -56,6 +56,9 @@
     position: relative;
     padding-bottom: 20px;
   }
+  #page-header h1 {
+    margin-bottom: 0;
+  }
   #page-header > img {
     position: absolute;
     top: 0;

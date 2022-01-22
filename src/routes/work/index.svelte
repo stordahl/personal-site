@@ -88,7 +88,7 @@
   #page-header {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     gap: 1rem;
     position: relative;
     background-color: var(--trans-bg);
@@ -100,6 +100,10 @@
     background-color: var(--trans-bg);
     color: var(--black);
     margin-bottom: 15px;
+  }
+
+  #page-header h1 {
+    margin-bottom: 0;
   }
 
   #page-header > img {
