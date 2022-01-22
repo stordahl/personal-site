@@ -35,7 +35,7 @@
     </a>
   </div>
   <div id="copyright">
-    <span>© {new Date().getFullYear()} Jacob Stordahl | <a href="https://github.com/stordahl">github</a></span>
+    <span>© {new Date().getFullYear()} Jacob Stordahl | <a href="https://github.com/stordahl">github</a> | <a href="https://twitter.com/stordahl">twitter</a></span>
   </div>
 </footer>
 
@@ -43,7 +43,7 @@
   footer {
     text-align: center;
     margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 7vh;
   }
 
   #copyright > span {
