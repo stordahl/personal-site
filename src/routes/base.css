@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Archivo Black';
-  src: url(/fonts/ArchivoBlack.ttf) format(truetype);
+  src: url(/static/fonts/ArchivoBlack.ttf) format(truetype);
 }
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url(/fonts/HelveticaNeue.ttf) format(truetype);
+  src: url(/static/fonts/HelveticaNeue.ttf) format(truetype);
 }
 @font-face {
   font-family: 'Ayuthaya';
-  src: url(/fonts/Ayuthaya.ttf) format(truetype);
+  src: url(/static/fonts/Ayuthaya.ttf) format(truetype);
 }
 
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-h1 { font-size: clamp(30px, calc(5vw + 2rem), 70px); text-align: right; }
+h1 { font-size: clamp(25px, calc(3vw + 2rem), 70px); text-align: right; }
 h2 { font-size: clamp(25px, calc(4vw + 1rem), 50px); }
 h3 { font-size: clamp(20px, calc(3.5vw + 1rem), 45px); }
 

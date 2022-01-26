@@ -40,9 +40,9 @@
 <style>
   section {
     display: grid;
-    grid-template-columns: minmax(50px, 50%) minmax(50px, 50%);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "content dots" "empty nav";
+    grid-template-areas: "content" "nav";
     min-height: 70vh;
     max-width: 100%;
     margin-top: 5vh;
@@ -51,21 +51,25 @@
   #content {
     grid-area: content;
     justify-items: right;
-    justify-self: left;
+    justify-self: center;
     align-self: end;
-    margin-left: auto;
     background-color: var(--trans-bg);
   }
 
   h1 {
-    font-size: clamp(50px, calc(5vw + 1rem), 70px);
+    font-size: clamp(30px, calc(5vw + 1rem), 70px);
     text-align: right;
   }
+
   h2 {
     font-size: clamp(15px, calc(1.5vw + .5rem), 25px);
     text-align: right;
   }
+
   #dots {
+    position: absolute;
+    top: 10%;
+    right: 0;
     grid-area: dots;
     width: clamp(200px, 8vw, 300px);
     height: max-content;
@@ -74,6 +78,7 @@
     transform: translate(-20px, 20px);
     z-index: -1;
   }
+
   #dots > img {
     max-width: 100%;
   }
@@ -84,14 +89,27 @@
     align-self: center;
   }
   nav > ul {
-    list-style: none;
-    /* font-size: clamp(1.2rem, calc(1vw + 1rem), 2rem); */
-    
-    
+    list-style: none;  
   }
   nav li a {
     font-family: var(--heading-family);
     font-weight: 900;
     font-size: clamp(1.2rem, calc(3vw + 1.5rem), 2rem);
+  }
+
+  @media screen and (min-width: 460px) {
+    section {
+      grid-template-columns: minmax(50px, 50%) minmax(50px, 50%);
+      grid-template-areas: "content dots" "empty nav";
+    }
+
+    #content {
+      justify-self: left;
+      margin-left: auto;
+    }
+
+    #dots {
+      position: static;
+    }
   }
 </style>
