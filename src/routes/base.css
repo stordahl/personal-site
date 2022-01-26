@@ -62,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-a:hover { text-decoration: underline;}
+a:hover, a:focus { text-decoration: underline; border: none; outline: none;}
 
 ul {
   list-style: none;
@@ -83,4 +83,12 @@ code[class*='language-'],
 pre[class*='language-'],
 code > * {
   font-family: 'Ayuthaya', monospace !important;
+}
+
+blockquote {
+  margin: 3rem auto;
+  border-left: 3px solid var(--blue);
+  font-size: clamp(1rem, calc(0.5vw + 1.2rem), 1.6rem);
+  padding-left: 1.2rem;
+  font-style: italic;
 }

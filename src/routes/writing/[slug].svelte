@@ -28,6 +28,8 @@
 
   export let post
 
+  $:console.log(post)
+
   $: published = new Date(post.publishedAt).toLocaleDateString('en', {
     month: 'long',
     day: '2-digit',
@@ -73,20 +75,18 @@
     serializers={{
       types: {
         code: Code,
-        image: ImageBlock
+        image: ImageBlock,
       },
       marks: {
         link: Link
       }
     }}
   />
-
 </article>
 <hr/>
 
 <style>
   p {
-    text-align: right;
     margin: 1rem 0;
   }
   article {
