@@ -22,94 +22,29 @@
 />
 
 <section>
-  <div id="content">
-    <h1>JACOB<br/>STORDAHL</h1>
-    <h2>designer & developer</h2>
-  </div>
-  <div id="dots">
-    <img src="/images/dots.svg" alt="A decorative dot grid">
-  </div>
-  <nav>
-    <ul>
-      <li><a sveltekit:prefetch href='/work'>work</a></li>
-      <li><a sveltekit:prefetch href='/writing'>writing</a></li>
-    </ul>
-  </nav>
+  <h1>Hi, I'm Jacob.</h1>
+  <p>
+    I'm a Software Engineer, obsessed with building tools and infrastructure that enable front-end teams to be productive. 
+    Currently, I'm building radical e-commerce user experiences at <a href="http://stylitics.com">Stylitics</a>. Check out some of my open source work <a href="/work">here</a>.
+    You can reach me on twitter or shoot me an email <a href="mailto:jacob@stordahl.dev">here</a>.
+    <span class="strike">I'm currently available for hire.</span>
+  </p>
+
 </section>
+
 
 <style>
   section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "content" "nav";
-    min-height: 70vh;
-    max-width: 100%;
-    margin-top: 5vh;
-  }
-  
-  #content {
-    grid-area: content;
-    justify-items: right;
-    justify-self: center;
-    align-self: end;
-    background-color: var(--trans-bg);
-  }
+    margin: 3rem auto;
+    max-width: clamp(200px, calc(2rem + 80vw), 900px);
+   }
 
   h1 {
     font-size: clamp(30px, calc(5vw + 1rem), 70px);
-    text-align: right;
+    text-align: left;
   }
 
-  h2 {
-    font-size: clamp(15px, calc(1.5vw + .5rem), 25px);
-    text-align: right;
-  }
-
-  #dots {
-    position: absolute;
-    top: 10%;
-    right: 0;
-    grid-area: dots;
-    width: clamp(200px, 8vw, 300px);
-    height: max-content;
-    justify-self: start;
-    align-self: end;
-    transform: translate(-20px, 20px);
-    z-index: -1;
-  }
-
-  #dots > img {
-    max-width: 100%;
-  }
-
-  nav {
-    grid-area: nav;
-    justify-self: center;
-    align-self: center;
-  }
-  nav > ul {
-    list-style: none;  
-  }
-  nav li a {
-    font-family: var(--heading-family);
-    font-weight: 900;
-    font-size: clamp(1.2rem, calc(3vw + 1.5rem), 2rem);
-  }
-
-  @media screen and (min-width: 460px) {
-    section {
-      grid-template-columns: minmax(50px, 50%) minmax(50px, 50%);
-      grid-template-areas: "content dots" "empty nav";
-    }
-
-    #content {
-      justify-self: left;
-      margin-left: auto;
-    }
-
-    #dots {
-      position: static;
-    }
+  p {
+    font-size: clamp(15px, calc(2vw + 1rem), 50px);
   }
 </style>

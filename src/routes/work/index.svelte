@@ -43,24 +43,7 @@
 <section>
   <div id="page-header">
     <h1>WORK</h1>
-    <div class="faded faded-all">
-      <p>These projects have been chosen to convey my strengths in UI/UX design, development, and graphic design.</p>
-    </div>
     <img src="/images/dots.svg" alt="a decorative dot grid">
-  </div>
-  <div>
-    {#each projects as {name, slug, type, year}, index}
-        <ListItem 
-          title={name} 
-          num={index + 1} 
-          path={`/work/${slug.current}`}
-        >
-          <div class="meta">
-            <span>{type}</span>
-            <span>{year}</span>
-          </div>
-        </ListItem>
-    {/each}
   </div>
   <div id="section-header">
     <div class="faded faded-all">
