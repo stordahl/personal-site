@@ -62,12 +62,6 @@
 </section>
 
 <style>
-  .meta{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 20px;
-  }
   #page-header {
     display: grid;
     grid-template-columns: 100%;
