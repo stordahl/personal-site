@@ -56,7 +56,7 @@
         url: 'https://stordahl.dev/images/og.png',
         width: 850,
         height: 650,
-        alt: 'Jacob Stordahl - designer & developer'
+        alt: 'Jacob Stordahl - software engineer'
       }
     ]
   }}
