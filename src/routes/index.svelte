@@ -26,7 +26,7 @@
   <p>
     I'm a Software Engineer, obsessed with building tools and infrastructure that enable front-end teams to be productive. 
     Currently, I'm building radical ecommerce user experiences at <a class="out" href="http://stylitics.com">Stylitics.</a> Check out some of my open source work <a href="/work">here</a>.
-    You can reach me on twitter or shoot me an email <a class="out" href="mailto:jacob@stordahl.dev">here</a>.
+    You can reach me on <a class="out" href="https://twitter.com/stordahl_">twitter</a> or shoot me an <a class="out" href="mailto:jacob@stordahl.dev">email</a>.
     <span class="strike">I'm currently available for hire.</span>
   </p>
 
